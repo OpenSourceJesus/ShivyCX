@@ -8,7 +8,6 @@
 
 DEFINE_LIST(Tagged, TaggedList)
 DEFINE_LIST(TaggedList, TaggedListList)
-DEFINE_LIST(Token, TokenList)
 
 typedef struct {
     TokenList *tokens;

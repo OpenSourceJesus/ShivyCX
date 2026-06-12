@@ -78,7 +78,7 @@ def python_output(line: str, in_comment: bool = False) -> str:
         lines.append(f"token:{_kind_label(tok.kind)}:{_token_text(tok)}")
     lines.append(f"in_comment:{'true' if out_in_comment else 'false'}")
     if not error_collector.ok():
-        lines.append(f"warnings:{error_collector.issue_count}")
+        lines.append(f"warnings:{len(error_collector.issues)}")
     return "\n".join(lines) + "\n"
 
 

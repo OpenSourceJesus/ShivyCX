@@ -74,7 +74,7 @@ def python_output(code: str) -> str:
             f"token:{_kind_label(tok.kind)}:{_token_text(tok)}:L{tok.logical_line}"
         )
     if not errors_core.error_collector.ok():
-        lines.append(f"issues:{errors_core.error_collector.issue_count}")
+        lines.append(f"issues:{len(errors_core.error_collector.issues)}")
     return "\n".join(lines) + "\n"
 
 
